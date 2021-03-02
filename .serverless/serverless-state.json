@@ -175,7 +175,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rankly-lambda/prod/1614663729687-2021-03-02T05:42:09.687Z/rankly-lambda.zip"
+                "S3Key": "serverless/rankly-lambda/prod/1614664278895-2021-03-02T05:51:18.895Z/rankly-lambda.zip"
               },
               "Handler": "handler.rankly",
               "Runtime": "nodejs12.x",
@@ -193,14 +193,14 @@
               "RanklyLogGroup"
             ]
           },
-          "RanklyLambdaVersionlYRyPvW0l5XTfSlbJ3svIJH800r3VOOwUddhEp3aqIo": {
+          "RanklyLambdaVersionajfdDabvqnpCpU4o9jmC2CgpGBQbq8NLJABr8CNc4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "RanklyLambdaFunction"
               },
-              "CodeSha256": "zoVYLeKV4QUIua0ZW7/KdWy8slGmSCywS9/eDczrn08="
+              "CodeSha256": "ZaTuxr6ee+JGzvAXbM0SfBANKeZEPRFQ1vl4ksF98tE="
             }
           },
           "HttpApi": {
@@ -305,7 +305,7 @@
           "RanklyLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "RanklyLambdaVersionlYRyPvW0l5XTfSlbJ3svIJH800r3VOOwUddhEp3aqIo"
+              "Ref": "RanklyLambdaVersionajfdDabvqnpCpU4o9jmC2CgpGBQbq8NLJABr8CNc4"
             }
           },
           "HttpApiId": {
@@ -442,7 +442,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "RanklyLambdaVersionlYRyPvW0l5XTfSlbJ3svIJH800r3VOOwUddhEp3aqIo"
+        "versionLogicalId": "RanklyLambdaVersionajfdDabvqnpCpU4o9jmC2CgpGBQbq8NLJABr8CNc4"
       }
     },
     "configValidationMode": "warn",
@@ -464,7 +464,7 @@
     "artifact": "C:\\Users\\User\\Documents\\GitHub\\serverless\\.serverless\\rankly-lambda.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/rankly-lambda/prod/1614663729687-2021-03-02T05:42:09.687Z",
+    "artifactDirectoryName": "serverless/rankly-lambda/prod/1614664278895-2021-03-02T05:51:18.895Z",
     "artifact": "rankly-lambda.zip"
   }
 }

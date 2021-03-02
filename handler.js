@@ -10,11 +10,13 @@ module.exports.rankly = async (event) => {
 
   return {
     statusCode: 200,
+    header: {
+      'Access-Control-Allow-Origin': '*'
+    },
     body: JSON.stringify(
       {
         message: 'Go Serverless v1.0! Your function executed successfully!',
-        //input: event,
-        emoji: rankEmoji
+        input: rankEmoji //some reason only returns with input
       },
       null,
       2
