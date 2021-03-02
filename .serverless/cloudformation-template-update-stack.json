@@ -74,7 +74,7 @@
     "RanklyLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/rankly-lambda-prod-rankly"
+        "LogGroupName": "/aws/lambda/rankly-lambda-dev-rankly"
       }
     },
     "IamRoleLambdaExecution": {
@@ -103,7 +103,7 @@
                 "-",
                 [
                   "rankly-lambda",
-                  "prod",
+                  "dev",
                   "lambda"
                 ]
               ]
@@ -119,7 +119,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rankly-lambda-prod*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rankly-lambda-dev*:*"
                     }
                   ]
                 },
@@ -130,7 +130,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rankly-lambda-prod*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rankly-lambda-dev*:*:*"
                     }
                   ]
                 }
@@ -144,7 +144,7 @@
             "-",
             [
               "rankly-lambda",
-              "prod",
+              "dev",
               {
                 "Ref": "AWS::Region"
               },
@@ -161,11 +161,11 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/rankly-lambda/prod/1614664278895-2021-03-02T05:51:18.895Z/rankly-lambda.zip"
+          "S3Key": "serverless/rankly-lambda/dev/1614665999549-2021-03-02T06:19:59.549Z/rankly-lambda.zip"
         },
         "Handler": "handler.rankly",
         "Runtime": "nodejs12.x",
-        "FunctionName": "rankly-lambda-prod-rankly",
+        "FunctionName": "rankly-lambda-dev-rankly",
         "MemorySize": 1024,
         "Timeout": 6,
         "Role": {
@@ -179,20 +179,20 @@
         "RanklyLogGroup"
       ]
     },
-    "RanklyLambdaVersionajfdDabvqnpCpU4o9jmC2CgpGBQbq8NLJABr8CNc4": {
+    "RanklyLambdaVersionyV1mxhfrEpLOytmQT1ClFa1wlzlI6t4j1lF3mkHXXsA": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "RanklyLambdaFunction"
         },
-        "CodeSha256": "ZaTuxr6ee+JGzvAXbM0SfBANKeZEPRFQ1vl4ksF98tE="
+        "CodeSha256": "9BvV6/7naTMjiTu7dBmg2fIJlwDmOrWrH+MzxCXEUiw="
       }
     },
     "HttpApi": {
       "Type": "AWS::ApiGatewayV2::Api",
       "Properties": {
-        "Name": "prod-rankly-lambda",
+        "Name": "dev-rankly-lambda",
         "ProtocolType": "HTTP"
       }
     },
@@ -294,7 +294,7 @@
     "RanklyLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "RanklyLambdaVersionajfdDabvqnpCpU4o9jmC2CgpGBQbq8NLJABr8CNc4"
+        "Ref": "RanklyLambdaVersionyV1mxhfrEpLOytmQT1ClFa1wlzlI6t4j1lF3mkHXXsA"
       }
     },
     "HttpApiId": {

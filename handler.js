@@ -15,7 +15,7 @@ module.exports.rankly = async (event) => {
     },
     body: JSON.stringify(
       {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
+        message: 'Take your badge!!',
         //input: event, //some reason only returns with input
         emoji: rankEmoji
       }
